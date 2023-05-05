@@ -5,7 +5,7 @@
   window.onscroll = function () {
     const ud_header = document.querySelector(".ud-header");
     const sticky = ud_header.offsetTop;
-    const logo = document.querySelector(".header-logo");
+    const logo = document.querySelector(".header-logo path");
 
     if (window.pageYOffset > sticky) {
       ud_header.classList.add("sticky");
@@ -15,9 +15,9 @@
 
     // === logo change
     if (ud_header.classList.contains("sticky")) {
-      logo.src = "assets/images/logo/logo.svg";
+        logo.setAttribute('fill', '#3248bc'); // Set the fill attribute to black
     } else {
-      logo.src = "assets/images/logo/logo-white.svg";
+      logo.setAttribute('fill', '#FFF'); // Set the fill attribute to white
     }
 
     // show or hide the back-top-top button
